@@ -1,0 +1,45 @@
+<div *ngIf="!isRegister">
+    <label>username:</label>
+    <input type="text" [(ngModel)]="username" >
+    <br>
+    <label>password:</label>
+    <input type="password" [(ngModel)]="password" >
+    <br>
+    <button (click)="login()">login</button>
+
+    <div *ngIf="isvalid&&">
+        <p>login successo</p>
+    </div>
+    <div *ngIf="!isvalid&&try_controll">
+        <p>Error username or password not valid</p>
+    </div>
+    <!--<button (click)="initialPage()" *ngIf="isvalid">torna alla pagina iniaziale</button>-->
+</div>
+
+
+
+
+<div *ngIf="isRegister">
+
+    <label>name:</label>
+    <input type="text" [(ngModel)]="name" >
+    <br>
+    <label>surname:</label>
+    <input type="text" [(ngModel)]="surname" >
+    <br>
+    <label>username:</label>
+    <input type="text" [(ngModel)]="username" >
+    <br>
+    <label>password:</label>
+    <input type="password" [(ngModel)]="password" >
+    <br>
+    <label>id:</label>
+    <input type="number" [(ngModel)]="id" >
+    <br>
+    <label>email:</label>
+    <input type="email" [(ngModel)]="email" >
+    <br>
+    <button (click)="register()">register</button>
+    <button (click)="initialPage()">torna alla pagina iniaziale</button>
+</div>
+<button (click)="isregister()" *ngIf="!isRegister">go to register</button>
